@@ -1,0 +1,17 @@
+_id: env_483e12f35e4240038c790b84758137a1
+type: Environment
+parentId: env_08621b509772e72718aef28072ada8c4e4d817fa
+modified: 1689291127010
+created: 1689291091400
+name: Blog Api
+data:
+  _local: http://127.0.0.1:8000
+  token: "{% response 'body', 'req_d83e3a3c90234da59ba287bb03b6bd93',
+    'b64::JC5kYXRhLmFjY2Vzc190b2tlbg==::46b', 'always', 60 %}"
+dataPropertyOrder:
+  "&":
+    - _local
+    - token
+color: null
+isPrivate: false
+metaSortKey: 1689291091400

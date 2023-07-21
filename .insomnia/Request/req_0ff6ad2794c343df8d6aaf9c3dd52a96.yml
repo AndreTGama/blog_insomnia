@@ -1,0 +1,58 @@
+_id: req_0ff6ad2794c343df8d6aaf9c3dd52a96
+type: Request
+parentId: fld_ad934523071845189312e0c73bb70886
+modified: 1689898610202
+created: 1687822407871
+url: "{{ _._local }}/api/users"
+name: Store
+description: |
+  ## Objective
+  This route will create a user in database
+
+
+  ## Request - JSON
+  - name: string **(Full name)**
+  - email: string **(uniqui)**
+  - password: string
+
+
+  ## Response
+
+  ```
+  {
+  	"error": boolean,
+  	"message":  string,
+  	"developerMessage": any,
+  	"exception": any,
+  	"data": null
+  }
+
+  OR 
+
+  {
+  	"message": String,
+  	"errors": any
+  }
+  ```
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"name": "arvasdfore Ándrareasdf",
+    	"email": "andregasdasasdffdasdasdasdfaasdfffamatsdeste@email.com",
+    	"password": "123456789"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1687822407872
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

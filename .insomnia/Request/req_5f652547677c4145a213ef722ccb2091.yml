@@ -1,0 +1,27 @@
+_id: req_5f652547677c4145a213ef722ccb2091
+type: Request
+parentId: fld_158841033aec4b939fb5e5b92c6c0ddc
+modified: 1689896741803
+created: 1689893441624
+url: "{{ _._local }}/api/categories/1"
+name: Delete Category
+description: ""
+method: DELETE
+body:
+  mimeType: application/json
+  text: ""
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication:
+  type: bearer
+  token: "{{ _.token }}"
+metaSortKey: -1689293391965
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,27 @@
+_id: req_883149a953e446c095523d726d6e5a44
+type: Request
+parentId: fld_158841033aec4b939fb5e5b92c6c0ddc
+modified: 1689897003955
+created: 1689896998445
+url: "{{ _._local }}/api/categories"
+name: Get All Category
+description: ""
+method: GET
+body:
+  mimeType: application/json
+  text: ""
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication:
+  type: bearer
+  token: "{{ _.token }}"
+metaSortKey: -1689293391990
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

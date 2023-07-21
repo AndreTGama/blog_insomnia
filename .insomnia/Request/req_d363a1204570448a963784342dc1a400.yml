@@ -1,0 +1,23 @@
+_id: req_d363a1204570448a963784342dc1a400
+type: Request
+parentId: fld_13436fb6bfb74bc6b5993cb13fa756b3
+modified: 1689291868482
+created: 1689291853467
+url: "{{ _._local }}/api/users/my-profile"
+name: Get Profile Loged
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: bearer
+  token: "{{ _.token }}"
+metaSortKey: -1689290195598
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

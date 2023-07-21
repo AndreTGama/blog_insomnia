@@ -1,0 +1,31 @@
+_id: req_86461dd236d44a69a5ba454a893b6b36
+type: Request
+parentId: fld_158841033aec4b939fb5e5b92c6c0ddc
+modified: 1689898440809
+created: 1689293392015
+url: "{{ _._local }}/api/categories"
+name: Create Category
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"name": "Google Cloud - Teste 2",
+    	"category_id": "null"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication:
+  type: bearer
+  token: "{{ _.token }}"
+metaSortKey: -1689293392015
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

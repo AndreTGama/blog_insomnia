@@ -1,0 +1,28 @@
+_id: req_b6195e6aa84c40b3bd53c19916653b83
+type: Request
+parentId: fld_ad934523071845189312e0c73bb70886
+modified: 1689289716022
+created: 1689289675800
+url: "{{ _._local }}/api/recover-password"
+name: Forgot PassWord
+description: ""
+method: GET
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1689289675800
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

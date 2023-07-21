@@ -1,0 +1,31 @@
+_id: req_2f1cb307232a4ca999bebc045f7afe2d
+type: Request
+parentId: fld_158841033aec4b939fb5e5b92c6c0ddc
+modified: 1689897647385
+created: 1689897538566
+url: "{{ _._local }}/api/categories/20"
+name: Update Category
+description: ""
+method: PUT
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"name": "Google Cloud - Teste ss4",
+    	"category_id": null
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication:
+  type: bearer
+  token: "{{ _.token }}"
+metaSortKey: -1689293392002.5
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
