@@ -1,0 +1,30 @@
+_id: req_c1208e02a3b34ffdbe6a62d8a894b9af
+type: Request
+parentId: fld_763d70523384429cbf28c814b3eb01ed
+modified: 1693222717202
+created: 1691952826277
+url: "{{ _._local }}/api/comments/my-comments/3"
+name: Create a Comment
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"comment": "Como faço para fazer parte"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication:
+  type: bearer
+  token: "{{ _.token }}"
+metaSortKey: -1691952829696
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

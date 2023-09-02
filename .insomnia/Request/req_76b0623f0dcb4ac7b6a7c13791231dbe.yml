@@ -1,10 +1,10 @@
-_id: req_d363a1204570448a963784342dc1a400
+_id: req_76b0623f0dcb4ac7b6a7c13791231dbe
 type: Request
-parentId: fld_62c6caba50ce4cc08c4afe671b345de6
-modified: 1690047555213
-created: 1689291853467
-url: "{{ _._local }}/api/users/my-profile"
-name: Get Profile Loged
+parentId: fld_59148568b6844a9c85d700c509b02d92
+modified: 1693222780143
+created: 1692617166518
+url: "{{ _._local }}/api/comments/moderator/1"
+name: Moderator get All
 description: ""
 method: GET
 body: {}
@@ -13,7 +13,7 @@ headers: []
 authentication:
   type: bearer
   token: "{{ _.token }}"
-metaSortKey: -1689290195598
+metaSortKey: -1692617166518
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

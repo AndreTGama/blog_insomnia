@@ -1,19 +1,19 @@
-_id: req_d363a1204570448a963784342dc1a400
+_id: req_1d8bd910b331404f936be24610d98d8b
 type: Request
-parentId: fld_62c6caba50ce4cc08c4afe671b345de6
-modified: 1690047555213
-created: 1689291853467
-url: "{{ _._local }}/api/users/my-profile"
-name: Get Profile Loged
+parentId: fld_59148568b6844a9c85d700c509b02d92
+modified: 1693222818791
+created: 1693221404235
+url: "{{ _._local }}/api/comments/moderator/destroy/4"
+name: Destroy Comment
 description: ""
-method: GET
+method: DELETE
 body: {}
 parameters: []
 headers: []
 authentication:
   type: bearer
   token: "{{ _.token }}"
-metaSortKey: -1689290195598
+metaSortKey: -1692286283151
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

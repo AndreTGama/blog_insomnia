@@ -1,17 +1,95 @@
 _id: req_b6195e6aa84c40b3bd53c19916653b83
 type: Request
 parentId: fld_ad934523071845189312e0c73bb70886
-modified: 1689289716022
+modified: 1693671149908
 created: 1689289675800
-url: "{{ _._local }}/api/recover-password"
-name: Forgot PassWord
-description: ""
-method: GET
+url: "{{ _._local }}/api/users/reset-password"
+name: Forgot Password
+description: >-
+  # Send E-mail to Reset password
+
+
+  This route allows the user to request a password reset by providing their email. An email containing a password reset code will be sent to the user.
+
+
+  ## HTTP Methods
+
+
+  - **POST**: This method is used to send the necessary data to create a new user from the client to the server.
+
+
+  ## Parameters
+
+
+  The request must include the following parameters in the body (JSON):
+
+
+  - **email**: The email address of the new user, which is usually used for communication and 
+
+
+  ## Workflow
+
+
+  This workflow outlines the steps involved in the password reset process when a user requests a password reset by providing their email.
+
+
+  1. **User Request**: The user initiates the password reset process by making a POST request to the `/api/reset-password` route with their email included in the request body.
+
+
+  2. **Server Validation**: The server receives the request and checks if the provided email exists in the system's database.
+
+     - If the email does not exist in the system, the server responds with an appropriate error message (e.g., `404 Not Found`) indicating that the email was not found in the system.
+
+     - If the email exists, the server proceeds to the next step.
+
+  3. **Password Reset Code Generation**: The server generates a unique password reset code, which is associated with the user's email. This code is typically a random or unique identifier.
+
+
+  4. **Code Storage**: The generated password reset code is temporarily stored in a secure location, such as a database or cache, along with a timestamp indicating when it was created. This allows the server to verify the code's validity and expiration.
+
+
+  5. **Email Notification**: An email containing the password reset instructions and the generated code is sent to the user's provided email address. This email includes a link or instructions for the user to complete the password reset process.
+
+
+  6. **User Action**: The user receives the email and follows the instructions provided to reset their password. Typically, this involves clicking a link that directs them to a password reset form.
+
+
+  7. **Password Reset Form**: The user is directed to a password reset form, where they can enter a new password along with the code provided in the email.
+
+
+  8. **Server Verification**: When the user submits the new password and the code, the server verifies the code's validity and expiration. It checks if the code matches the one associated with the user's email and if it has not expired.
+
+     - If the code is valid and has not expired, the server allows the user to reset their password and updates their password in the database.
+
+     - If the code is invalid or has expired, the server responds with an error message, indicating that the code is no longer valid.
+
+  9. **Password Reset Confirmation**: Upon successful password reset, the server sends a confirmation response to the user, indicating that their password has been updated.
+
+
+  10. **Password Updated**: The user's password is now successfully updated, and they can log in using their new credentials.
+
+
+  This workflow outlines the steps involved in the password reset process, from the initial user request to the successful password update. It ensures security and user-friendly communication throughout the process.
+
+
+  ## Return
+
+
+  ```typeScript 
+
+  {
+  	error: boolean,
+  	message: string,
+  	developerMessage: string,
+  	exception: string | null,
+  	data: null
+  }
+method: POST
 body:
   mimeType: application/json
   text: |-
     {
-    	
+    	"email": "abshire.holly@example.net"
     }
 parameters: []
 headers:

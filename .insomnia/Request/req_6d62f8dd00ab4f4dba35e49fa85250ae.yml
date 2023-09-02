@@ -1,0 +1,32 @@
+_id: req_6d62f8dd00ab4f4dba35e49fa85250ae
+type: Request
+parentId: fld_77ee720ef0cd4f73b808db9cf2a0d452
+modified: 1691953295805
+created: 1690327103175
+url: "{{ _._local }}/api/posts/"
+name: Create Post
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"title": "teste 1000",
+    	"post": "post",
+    	"categories_ids": [1,54]
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication:
+  type: bearer
+  token: "{{ _.token }}"
+metaSortKey: -1690055605699
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

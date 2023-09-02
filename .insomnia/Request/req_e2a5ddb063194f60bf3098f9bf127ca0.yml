@@ -1,19 +1,23 @@
-_id: req_d363a1204570448a963784342dc1a400
+_id: req_e2a5ddb063194f60bf3098f9bf127ca0
 type: Request
 parentId: fld_62c6caba50ce4cc08c4afe671b345de6
-modified: 1690047555213
-created: 1689291853467
-url: "{{ _._local }}/api/users/my-profile"
-name: Get Profile Loged
+modified: 1690052300027
+created: 1690052292239
+url: "{{ _._local }}/api/users/my-profile/destroy"
+name: Destroy Profile Loged
 description: ""
-method: GET
-body: {}
+method: DELETE
+body:
+  mimeType: application/json
+  text: ""
 parameters: []
-headers: []
+headers:
+  - name: Content-Type
+    value: application/json
 authentication:
   type: bearer
   token: "{{ _.token }}"
-metaSortKey: -1689290195598
+metaSortKey: -1689289740774.75
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

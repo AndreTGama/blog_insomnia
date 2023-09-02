@@ -1,0 +1,27 @@
+_id: req_391bc10b5fa14a028e34438f5535660f
+type: Request
+parentId: fld_763d70523384429cbf28c814b3eb01ed
+modified: 1693222731456
+created: 1691955399934
+url: "{{ _._local }}/api/comments/my-comments/1"
+name: My Comments
+description: ""
+method: GET
+body: {}
+parameters:
+  - id: pair_08f9d018e8a24da9b70de65411c41aee
+    name: ""
+    value: ""
+    description: ""
+headers: []
+authentication:
+  type: bearer
+  token: "{{ _.token }}"
+metaSortKey: -1691955399934
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

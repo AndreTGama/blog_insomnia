@@ -1,0 +1,29 @@
+_id: req_bfd5ee22c25e4b5b95f393169c876162
+type: Request
+parentId: fld_13436fb6bfb74bc6b5993cb13fa756b3
+modified: 1690055283918
+created: 1690055061551
+url: "{{ _._local }}/api/users/restore/4"
+name: Restore One
+description: ""
+method: PUT
+body:
+  mimeType: application/json
+  text: ""
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_aa4f6db52b6d4d61b5b7378cfe463f62
+    disabled: false
+authentication:
+  type: bearer
+  token: "{{ _.token }}"
+metaSortKey: -1689290244329.0625
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

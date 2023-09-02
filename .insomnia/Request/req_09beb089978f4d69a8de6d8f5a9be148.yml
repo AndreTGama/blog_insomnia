@@ -1,14 +1,22 @@
 _id: req_09beb089978f4d69a8de6d8f5a9be148
 type: Request
 parentId: fld_13436fb6bfb74bc6b5993cb13fa756b3
-modified: 1689291024387
+modified: 1693223326177
 created: 1689290715396
 url: "{{ _._local }}/api/users"
 name: Get All
 description: ""
 method: GET
 body: {}
-parameters: []
+parameters:
+  - id: pair_eb475c08d08c4390a96a6bba0f5a561e
+    name: take
+    value: "5"
+    description: ""
+  - id: pair_d785a123359b4d41a40a3d8c23326bde
+    name: page
+    value: "1"
+    description: ""
 headers: []
 authentication:
   type: bearer

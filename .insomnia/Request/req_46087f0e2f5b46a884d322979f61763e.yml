@@ -1,19 +1,19 @@
-_id: req_d363a1204570448a963784342dc1a400
+_id: req_46087f0e2f5b46a884d322979f61763e
 type: Request
-parentId: fld_62c6caba50ce4cc08c4afe671b345de6
-modified: 1690047555213
-created: 1689291853467
-url: "{{ _._local }}/api/users/my-profile"
-name: Get Profile Loged
+parentId: fld_c6249e5b6ef747c8b7475da12be29ada
+modified: 1690503940908
+created: 1690330907820
+url: "{{ _._local }}/api/posts/moderator/aprove/4"
+name: Aprove Posts
 description: ""
-method: GET
+method: PUT
 body: {}
 parameters: []
 headers: []
 authentication:
   type: bearer
   token: "{{ _.token }}"
-metaSortKey: -1689290195598
+metaSortKey: -1690124266844
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

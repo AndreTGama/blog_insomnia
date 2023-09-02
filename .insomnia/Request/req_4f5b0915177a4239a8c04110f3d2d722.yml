@@ -1,0 +1,21 @@
+_id: req_4f5b0915177a4239a8c04110f3d2d722
+type: Request
+parentId: fld_77ee720ef0cd4f73b808db9cf2a0d452
+modified: 1690329467205
+created: 1690055605749
+url: "{{ _._local }}/api/posts/1"
+name: Get All Posts - Paginate
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1690055605749
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

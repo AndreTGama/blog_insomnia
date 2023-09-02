@@ -1,0 +1,29 @@
+_id: req_6119691b1a1c4971b00e2b7a24452573
+type: Request
+parentId: fld_13436fb6bfb74bc6b5993cb13fa756b3
+modified: 1690055198617
+created: 1690051084712
+url: "{{ _._local }}/api/users/4"
+name: Delete One
+description: ""
+method: DELETE
+body:
+  mimeType: application/json
+  text: "\t"
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_aa4f6db52b6d4d61b5b7378cfe463f62
+    disabled: false
+authentication:
+  type: bearer
+  token: "{{ _.token }}"
+metaSortKey: -1689290260572.75
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

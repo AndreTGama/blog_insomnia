@@ -1,0 +1,31 @@
+_id: req_4525283b682e4d5ba429232ae26c13bd
+type: Request
+parentId: fld_158841033aec4b939fb5e5b92c6c0ddc
+modified: 1690055558533
+created: 1690055466736
+url: "{{ _._local }}/api/categories/restore/45"
+name: Restore Category
+description: ""
+method: PUT
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"name": "Google Cloud - Teste ss4",
+    	"category_id": null
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication:
+  type: bearer
+  token: "{{ _.token }}"
+metaSortKey: -1689293391971.25
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

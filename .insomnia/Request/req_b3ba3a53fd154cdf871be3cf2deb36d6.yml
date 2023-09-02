@@ -1,0 +1,33 @@
+_id: req_b3ba3a53fd154cdf871be3cf2deb36d6
+type: Request
+parentId: fld_13436fb6bfb74bc6b5993cb13fa756b3
+modified: 1690049845484
+created: 1690047538687
+url: "{{ _._local }}/api/users/2"
+name: Update One
+description: ""
+method: PUT
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"name": "arvasdfore Ándrareasdf",
+    	"email": "anddfsdrte@email.com.br"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_aa4f6db52b6d4d61b5b7378cfe463f62
+    disabled: false
+authentication:
+  type: bearer
+  token: "{{ _.token }}"
+metaSortKey: -1689290325547.5
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

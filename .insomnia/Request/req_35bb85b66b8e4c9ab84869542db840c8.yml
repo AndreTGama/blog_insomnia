@@ -1,0 +1,29 @@
+_id: req_35bb85b66b8e4c9ab84869542db840c8
+type: Request
+parentId: fld_13436fb6bfb74bc6b5993cb13fa756b3
+modified: 1690051176460
+created: 1690051101576
+url: "{{ _._local }}/api/users/destroy/3"
+name: Destroy One
+description: ""
+method: DELETE
+body:
+  mimeType: application/json
+  text: ""
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_aa4f6db52b6d4d61b5b7378cfe463f62
+    disabled: false
+authentication:
+  type: bearer
+  token: "{{ _.token }}"
+metaSortKey: -1689290228085.375
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

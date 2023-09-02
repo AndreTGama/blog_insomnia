@@ -1,0 +1,32 @@
+_id: req_9808ef01cc5b454baf3314609ffd402f
+type: Request
+parentId: fld_b6a17e478f554d0cae45dcea55eb933c
+modified: 1691936652908
+created: 1690501661814
+url: "{{ _._local }}/api/posts/my-posts/2"
+name: Update Posts
+description: ""
+method: PUT
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"title": "teste",
+    	"post": "post update",
+    	"categories_ids": [1]
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication:
+  type: bearer
+  token: "{{ _.token }}"
+metaSortKey: -1690416645593.5
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
