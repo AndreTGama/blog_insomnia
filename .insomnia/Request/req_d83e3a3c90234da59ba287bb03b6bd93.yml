@@ -1,7 +1,7 @@
 _id: req_d83e3a3c90234da59ba287bb03b6bd93
 type: Request
 parentId: fld_9c14a55c565b47b5bfa012d7f0e66afc
-modified: 1693665851291
+modified: 1693778040939
 created: 1689119796725
 url: "{{ _._local }}/api/auth"
 name: Auth
@@ -84,7 +84,7 @@ body:
   text: |-
     {
     	"email": "abshire.holly@example.net",
-    	"password": "password"
+    	"password": "123456789"
     }
 parameters: []
 headers:

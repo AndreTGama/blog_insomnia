@@ -1,7 +1,7 @@
 _id: req_b6195e6aa84c40b3bd53c19916653b83
 type: Request
 parentId: fld_ad934523071845189312e0c73bb70886
-modified: 1693671149908
+modified: 1693753939061
 created: 1689289675800
 url: "{{ _._local }}/api/users/reset-password"
 name: Forgot Password
@@ -33,7 +33,7 @@ description: >-
   This workflow outlines the steps involved in the password reset process when a user requests a password reset by providing their email.
 
 
-  1. **User Request**: The user initiates the password reset process by making a POST request to the `/api/reset-password` route with their email included in the request body.
+  1. **User Request**: The user initiates the password reset process by making a POST request to the `/api/users/reset-password` route with their email included in the request body.
 
 
   2. **Server Validation**: The server receives the request and checks if the provided email exists in the system's database.
@@ -49,24 +49,6 @@ description: >-
 
 
   5. **Email Notification**: An email containing the password reset instructions and the generated code is sent to the user's provided email address. This email includes a link or instructions for the user to complete the password reset process.
-
-
-  6. **User Action**: The user receives the email and follows the instructions provided to reset their password. Typically, this involves clicking a link that directs them to a password reset form.
-
-
-  7. **Password Reset Form**: The user is directed to a password reset form, where they can enter a new password along with the code provided in the email.
-
-
-  8. **Server Verification**: When the user submits the new password and the code, the server verifies the code's validity and expiration. It checks if the code matches the one associated with the user's email and if it has not expired.
-
-     - If the code is valid and has not expired, the server allows the user to reset their password and updates their password in the database.
-
-     - If the code is invalid or has expired, the server responds with an error message, indicating that the code is no longer valid.
-
-  9. **Password Reset Confirmation**: Upon successful password reset, the server sends a confirmation response to the user, indicating that their password has been updated.
-
-
-  10. **Password Updated**: The user's password is now successfully updated, and they can log in using their new credentials.
 
 
   This workflow outlines the steps involved in the password reset process, from the initial user request to the successful password update. It ensures security and user-friendly communication throughout the process.

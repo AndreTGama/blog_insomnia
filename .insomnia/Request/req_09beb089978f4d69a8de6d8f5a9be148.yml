@@ -1,11 +1,85 @@
 _id: req_09beb089978f4d69a8de6d8f5a9be148
 type: Request
 parentId: fld_13436fb6bfb74bc6b5993cb13fa756b3
-modified: 1693223326177
+modified: 1693778475109
 created: 1689290715396
 url: "{{ _._local }}/api/users"
 name: Get All
-description: ""
+description: >-
+  # Route `/api/users`
+
+
+  This route is designed to provide information about all users currently registered in the system. You can use queries to control the number of results returned and implement pagination.
+
+
+  ## Endpoint
+
+
+  - Method: GET
+
+  - URL: `/api/users`
+
+
+  ## Queries
+
+
+  Queries can be used to control the query's behavior and implement pagination.
+
+
+  ### `take` (optional)
+
+  ### `page` (optional)
+
+
+  - Description: Sets the maximum number of results to be returned. Useful for limiting the response size.
+
+
+  ## Return
+
+
+  ```
+
+  error: boolean;
+
+  message: string;
+
+  developerMessage: string;
+
+  exception: null | string;
+
+  data: {
+  	current_page: number;
+  	data: {
+  	 current_page: number;
+          data: [{
+  					id: number;	
+  					name: string;
+  					photo_name: string;
+  					email: string;
+  					email_verified_at: string | null;
+  					deleted_at: string | null;
+  					created_at: string;
+  					updated_at: string;
+  				}]
+          first_page_url: string;
+          from: number;
+          last_page: number;
+          last_page_url: string;
+          links: {
+              url: string | null;
+              label: string;
+              active: boolean;
+          }[];
+          next_page_url: string | null;
+          path: string;
+          per_page: number;
+          prev_page_url: string | null;
+          to: number;
+          total: number;
+  	}
+  };
+
+  ```
 method: GET
 body: {}
 parameters:
