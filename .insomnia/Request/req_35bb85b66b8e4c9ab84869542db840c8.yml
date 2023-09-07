@@ -1,11 +1,54 @@
 _id: req_35bb85b66b8e4c9ab84869542db840c8
 type: Request
 parentId: fld_13436fb6bfb74bc6b5993cb13fa756b3
-modified: 1690051176460
+modified: 1694102053974
 created: 1690051101576
 url: "{{ _._local }}/api/users/destroy/3"
 name: Destroy One
-description: ""
+description: >-
+  ## Route to Permanently Destroy a User Account
+
+
+  This route allows you to permanently destroy (delete) a user account in the system based on their ID. Unlike soft deletion, which can be restored, this action is irreversible.
+
+
+  - **Route:** `/api/users/{id}`
+
+  - **HTTP Method:** `DELETE`
+
+
+  ### Parameter
+
+
+  - `{id}` (required) - The unique ID of the user account you want to permanently destroy. 
+
+
+  ## Workflow
+
+
+  1. The client makes a DELETE request to `/api/users/{id}`, specifying the ID of the user account they want to permanently destroy as part of the URL.
+
+  2. The controller calls the `destroy` function with the provided ID as a parameter.
+
+  3. The controller uses `User::where('id', $id)->forceDelete()` to locate the user account with the specified ID and permanently destroy it, removing it from the database entirely.
+
+  4. A successful response (status code 200) is returned to the client with a message indicating that the account has been permanently destroyed. The data payload is typically set to `null` as there is no user account data to return after destruction.
+
+  5. If the user account is not found, the route may still return a successful response, indicating that the account does not exist.
+
+
+  ## Return 
+
+
+  ```typescript 
+
+  {
+  	error: boolean,
+  	message: string,
+  	developerMessage: string,
+  	exception: string | null,
+  	data: null
+  }
 method: DELETE
 body:
   mimeType: application/json

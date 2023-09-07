@@ -1,11 +1,76 @@
 _id: req_b3ba3a53fd154cdf871be3cf2deb36d6
 type: Request
 parentId: fld_13436fb6bfb74bc6b5993cb13fa756b3
-modified: 1690049845484
+modified: 1694099487715
 created: 1690047538687
 url: "{{ _._local }}/api/users/2"
 name: Update One
-description: ""
+description: >-
+  ## Route to Update User Information
+
+
+  This route allows you to update a user's information in the system based on their ID.
+
+
+  - **Route:** `/api/users/{id}`
+
+  - **HTTP Method:** `PUT`
+
+
+  ### Parameters
+
+
+  - `{id}` (required) - The unique ID of the user you want to update.
+
+
+  **Request Body:** The data you want to update for the user should be provided in the request body in a compatible format (e.g., JSON).
+
+
+  ### Workflow
+
+
+  1. The client makes a PUT request to `/api/users/{id}`, specifying the ID of the user they want to update as part of the URL.
+
+  2. The request body should contain the data you want to update for the user.
+
+  3. The controller calls the `update` function with the ID and the data provided in the request body.
+
+  4. The controller starts a database transaction using `DB::beginTransaction()`.
+
+  5. The data from the request body is collected using `$req->all()`.
+
+  6. The controller locates the user with the specified ID using `User::findOrFail($id)`.
+
+  7. The user's data is updated with the provided data using `$user->update($data)`.
+
+  8. If the update is successful, the database transaction is committed using `DB::commit()`.
+
+  9. A successful response (status code 200) is returned to the client with the updated user data.
+
+  10. If any errors occur during the process, the database transaction is rolled back using `DB::rollBack()`.
+
+  11. An error response (status code 400) is returned to the client with a detailed error message.
+
+
+  ## Return
+
+
+
+  ```typescript 
+
+  {
+  	error: boolean,
+  	message: string | null,
+  	developerMessage: string | null,
+  	exception: string | null,
+  	data: {
+  		id: number;
+    	name: string;
+    	email: string;
+    	created_at: string;
+    	updated_at: string;
+  	} | null
+  }
 method: PUT
 body:
   mimeType: application/json

@@ -1,11 +1,69 @@
 _id: req_29117b5f05864a988c3fb834bc690e4f
 type: Request
 parentId: fld_13436fb6bfb74bc6b5993cb13fa756b3
-modified: 1690046604428
+modified: 1694098894702
 created: 1690046511908
 url: "{{ _._local }}/api/users/1"
 name: Get One
-description: ""
+description: >-
+  ## Route to Get User Information
+
+
+  This route allows you to retrieve detailed information about a system user based on their ID.
+
+
+  - **Route:** `/api/users/{id}`
+
+  - **HTTP Method:** `GET`
+
+  - **Parameters:**
+    - `{id}` (required) - The unique ID of the user you want to retrieve.
+
+  ### Workflow
+
+
+  1. The client makes a GET request to `/api/users/{id}`, specifying the desired user's ID as part of the URL.
+
+  2. The controller calls the `getOne` function with the provided ID as a parameter.
+
+  3. The controller attempts to locate the user with the specified ID using `User::findOrFail($id)`.
+
+  4. If the user is found, the function retrieves user information, including their related posts and comments.
+
+  5. User, post, and comment data are formatted into a JSON response.
+
+  6. A successful response (status code 200) is returned to the client with the user's data.
+
+  7. If any errors occur during the process, an error response (status code 400) is returned with a detailed error message.
+
+
+  ## Return
+
+
+  ```typescript 
+
+  {
+  	error: boolean,
+  	message: string | null,
+  	developerMessage: string | null,
+  	exception: string | null,
+  	data: {
+  		id: number;
+    	name: string;
+    	email: string;
+    	created_at: string;
+    	updated_at: string;
+    	posts: {
+  			id: number;
+    		title: string;
+    		content: string;
+  		}[];
+    	comments: {
+  			id: number;
+    		text: string;
+  		}[];
+  	} | null
+  }
 method: GET
 body: {}
 parameters: []

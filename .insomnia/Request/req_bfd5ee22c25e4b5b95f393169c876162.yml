@@ -1,11 +1,56 @@
 _id: req_bfd5ee22c25e4b5b95f393169c876162
 type: Request
 parentId: fld_13436fb6bfb74bc6b5993cb13fa756b3
-modified: 1690055283918
+modified: 1694101739731
 created: 1690055061551
 url: "{{ _._local }}/api/users/restore/4"
 name: Restore One
-description: ""
+description: >-
+  ## Route to Restore a Deactivated User Account
+
+
+  This route allows you to restore a previously deactivated user account in the system based on their ID.
+
+
+  - **Route:** `/api/users/{id}`
+
+  - **HTTP Method:** `PUT`
+
+
+  ### Parameter
+
+
+  - `{id}` (required) - The unique ID of the user account you want to restore. 
+
+
+  ## Workflow
+
+
+  1. The client makes a POST request to `/api/users/{id}`, specifying the ID of the user account they want to restore as part of the URL.
+
+  2. The controller calls the `restore` function with the provided ID as a parameter.
+
+  3. The controller uses `User::withTrashed()->find($id)` to locate the user account with the specified ID, even if it has been marked as deactivated (soft-deleted).
+
+  4. If the user account is found and marked as deactivated, it is restored to an active state.
+
+  5. A successful response (status code 200) is returned to the client with a message indicating that the account has been restored successfully.
+
+  6. If the user account is not found or was not previously deactivated, a successful response will still be returned, indicating that the account is either already active or does not exist.
+
+
+  ## Return
+
+
+  ```typescript 
+
+  {
+  	error: boolean,
+  	message: string,
+  	developerMessage: string,
+  	exception: string | null,
+  	data: null
+  }
 method: PUT
 body:
   mimeType: application/json
