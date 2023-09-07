@@ -1,0 +1,70 @@
+_id: req_1741048825bf482e9a85bf082a3f11a0
+type: Request
+parentId: fld_ad934523071845189312e0c73bb70886
+modified: 1694098247887
+created: 1693760625208
+url: "{{ _._local }}/api/users/reset-password"
+name: Reset Password
+description: >-
+  # Route `/api/users/reset-password`
+
+
+  This route is used to reset a user's password by providing a verification code and the new desired password. It is a PUT method route that requires valid authentication.
+
+
+  ## Endpoint
+
+
+  - Method: PUT
+
+  - URL: `/api/users/reset-password`
+
+
+  ## Parameters
+
+
+  Parameters should be provided in the request body in JSON format.
+
+
+  ### `code` (string, required)
+
+  ### `password` (string, required)
+
+
+  A unique verification code that was sent to the user via email or another method.
+
+
+
+  ## Return
+
+
+  ```typeScript 
+
+  {
+  	error: boolean,
+  	message: string,
+  	developerMessage: string,
+  	exception: string | null,
+  	data: null
+  }
+method: PUT
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"code": "64f4bab83sd5958",
+    	"password": "123456789"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1689204736262.5
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
